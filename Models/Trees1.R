@@ -17,7 +17,7 @@ data <- select(data, -Ticket, -Cabin)
 
 #In this code we will evaluate first the hyper tunning with trees 
 #Then the cross validation with trees
-#finally a mix of both, we´ll also provide graphics
+#finally a mix of both, weÂ´ll also provide graphics
 
 #First of all only hyper tunning
 library(rpart)
@@ -67,7 +67,7 @@ prp(treebest, main = "Were the survivors male or female?",
     split.border.col = "darkgray", # darkgray border on split boxes
     split.round = .5)
 
-#Now let´s try K-Cross Validation, with repetitive iterations
+#Now letÂ´s try K-Cross Validation, with repetitive iterations
 rep_accuracy = 0; n_fold = 5; times = 20
 for (j in 1:times){
   # reordering
