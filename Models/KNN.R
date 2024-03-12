@@ -24,14 +24,14 @@ for (i in 1:8){
 }
 
 
-#We could try to normalize the data so it won´t be so problematic
-#And so the output won´t be biased
+#We could try to normalize the data so it wonÂ´t be so problematic
+#And so the output wonÂ´t be biased
 normalize <- function(x) {
   return ((x - min(x)) / (max(x) - min(x))) }
 data<- as.data.frame(lapply(data[,1:8], normalize))
 #it doesn't work because we are also normalizing variables such as male or female
 
-#Let´s try to do some hypertunning with knn incorporated
+#LetÂ´s try to do some hypertunning with knn incorporated
 #We define a grid with values of k
 #We sample the data, and create a train and test set
 grid3 = expand.grid(k = 1:50)
