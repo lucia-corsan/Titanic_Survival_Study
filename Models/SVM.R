@@ -18,10 +18,10 @@ train = data[idx_train,]
 test = data[-idx_train,]
 
 #Polynomial kernel
-#First of all let´s create our grid of the variable degree
+#First of all letÂ´s create our grid of the variable degree
 grid4 = expand.grid(degree = 1:100)
-#in this particular case we´re going to encounter with an intrinsic error of the library
-#The max nº of iterations is bounded and the accuracies will be repeated
+#in this particular case weÂ´re going to encounter with an intrinsic error of the library
+#The max nÂº of iterations is bounded and the accuracies will be repeated
 for (i in 1:nrow(grid4)){
   svm = svm(Survived~., train, type = "C-classification",
             kernel = "polynomial", degree = grid4$degree[i])
